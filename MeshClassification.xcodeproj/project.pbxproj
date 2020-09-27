@@ -8,22 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		12407ABC2520D5F40071AF0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407ABB2520D5F40071AF0C /* AppDelegate.swift */; };
-		12407ABE2520D5F40071AF0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407ABD2520D5F40071AF0C /* ContentView.swift */; };
-		12407AC02520D5F40071AF0C /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 12407ABF2520D5F40071AF0C /* Experience.rcproject */; };
+		12407ABE2520D5F40071AF0C /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407ABD2520D5F40071AF0C /* RootView.swift */; };
 		12407AC22520D5F50071AF0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12407AC12520D5F50071AF0C /* Assets.xcassets */; };
 		12407AC52520D5F50071AF0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12407AC42520D5F50071AF0C /* Preview Assets.xcassets */; };
 		12407AC82520D5F50071AF0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12407AC62520D5F50071AF0C /* LaunchScreen.storyboard */; };
+		12407AD52520D8B20071AF0C /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407AD42520D8B20071AF0C /* ContainerView.swift */; };
+		12407ADA2520DD860071AF0C /* ContainerView+CoachingOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407AD92520DD860071AF0C /* ContainerView+CoachingOverlay.swift */; };
+		12407ADD2520DD9C0071AF0C /* ContainerView+SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407ADC2520DD9C0071AF0C /* ContainerView+SessionDelegate.swift */; };
+		12407B4C2520E2840071AF0C /* Math+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407B4B2520E2840071AF0C /* Math+Extensions.swift */; };
+		12407B502520E32F0071AF0C /* ARMeshClassification+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407B4F2520E32F0071AF0C /* ARMeshClassification+Extensions.swift */; };
+		12407B542520E3AF0071AF0C /* ARMeshGeometry+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407B532520E3AF0071AF0C /* ARMeshGeometry+Extensions.swift */; };
+		12407B582520F3950071AF0C /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407B572520F3950071AF0C /* UIView+Extensions.swift */; };
+		12407B5B2520F42F0071AF0C /* ContainerView+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12407B5A2520F42F0071AF0C /* ContainerView+Gestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		12407AB82520D5F40071AF0C /* MeshClassification.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeshClassification.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		12407ABB2520D5F40071AF0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		12407ABD2520D5F40071AF0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		12407ABF2520D5F40071AF0C /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
+		12407ABD2520D5F40071AF0C /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		12407AC12520D5F50071AF0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12407AC42520D5F50071AF0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		12407AC72520D5F50071AF0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12407AC92520D5F50071AF0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12407AD42520D8B20071AF0C /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		12407AD92520DD860071AF0C /* ContainerView+CoachingOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContainerView+CoachingOverlay.swift"; sourceTree = "<group>"; };
+		12407ADC2520DD9C0071AF0C /* ContainerView+SessionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContainerView+SessionDelegate.swift"; sourceTree = "<group>"; };
+		12407B4B2520E2840071AF0C /* Math+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Math+Extensions.swift"; sourceTree = "<group>"; };
+		12407B4F2520E32F0071AF0C /* ARMeshClassification+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARMeshClassification+Extensions.swift"; sourceTree = "<group>"; };
+		12407B532520E3AF0071AF0C /* ARMeshGeometry+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ARMeshGeometry+Extensions.swift"; sourceTree = "<group>"; };
+		12407B572520F3950071AF0C /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		12407B5A2520F42F0071AF0C /* ContainerView+Gestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContainerView+Gestures.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,11 +70,9 @@
 		12407ABA2520D5F40071AF0C /* MeshClassification */ = {
 			isa = PBXGroup;
 			children = (
-				12407ABB2520D5F40071AF0C /* AppDelegate.swift */,
-				12407ABD2520D5F40071AF0C /* ContentView.swift */,
-				12407ABF2520D5F40071AF0C /* Experience.rcproject */,
-				12407AC12520D5F50071AF0C /* Assets.xcassets */,
-				12407AC62520D5F50071AF0C /* LaunchScreen.storyboard */,
+				12407AD02520D70B0071AF0C /* Classes */,
+				12407AE12520DEAA0071AF0C /* Resources */,
+				12407AE02520DE8C0071AF0C /* Storyboards */,
 				12407AC92520D5F50071AF0C /* Info.plist */,
 				12407AC32520D5F50071AF0C /* Preview Content */,
 			);
@@ -73,6 +85,55 @@
 				12407AC42520D5F50071AF0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12407AD02520D70B0071AF0C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				12407ABB2520D5F40071AF0C /* AppDelegate.swift */,
+				12407AD22520D8960071AF0C /* Views */,
+				12407B4E2520E2E20071AF0C /* Extensions */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		12407AD22520D8960071AF0C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12407AD42520D8B20071AF0C /* ContainerView.swift */,
+				12407AD92520DD860071AF0C /* ContainerView+CoachingOverlay.swift */,
+				12407B5A2520F42F0071AF0C /* ContainerView+Gestures.swift */,
+				12407ADC2520DD9C0071AF0C /* ContainerView+SessionDelegate.swift */,
+				12407ABD2520D5F40071AF0C /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12407AE02520DE8C0071AF0C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				12407AC62520D5F50071AF0C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		12407AE12520DEAA0071AF0C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12407AC12520D5F50071AF0C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		12407B4E2520E2E20071AF0C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12407B4F2520E32F0071AF0C /* ARMeshClassification+Extensions.swift */,
+				12407B532520E3AF0071AF0C /* ARMeshGeometry+Extensions.swift */,
+				12407B4B2520E2840071AF0C /* Math+Extensions.swift */,
+				12407B572520F3950071AF0C /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,9 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12407ABE2520D5F40071AF0C /* ContentView.swift in Sources */,
+				12407ADD2520DD9C0071AF0C /* ContainerView+SessionDelegate.swift in Sources */,
+				12407B542520E3AF0071AF0C /* ARMeshGeometry+Extensions.swift in Sources */,
+				12407ABE2520D5F40071AF0C /* RootView.swift in Sources */,
+				12407B582520F3950071AF0C /* UIView+Extensions.swift in Sources */,
+				12407B5B2520F42F0071AF0C /* ContainerView+Gestures.swift in Sources */,
+				12407AD52520D8B20071AF0C /* ContainerView.swift in Sources */,
+				12407B4C2520E2840071AF0C /* Math+Extensions.swift in Sources */,
 				12407ABC2520D5F40071AF0C /* AppDelegate.swift in Sources */,
-				12407AC02520D5F40071AF0C /* Experience.rcproject in Sources */,
+				12407B502520E32F0071AF0C /* ARMeshClassification+Extensions.swift in Sources */,
+				12407ADA2520DD860071AF0C /* ContainerView+CoachingOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
