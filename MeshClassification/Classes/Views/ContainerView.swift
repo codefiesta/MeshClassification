@@ -11,7 +11,10 @@ import ARKit
 
 class ContainerView: UIView {
     
+    // Our ARView
     var arView: ARView!
+
+    // Cache of Mesh Classification Text Models
     var classifications: [ARMeshClassification: ModelEntity] = [:]
     
     override init(frame: CGRect) {

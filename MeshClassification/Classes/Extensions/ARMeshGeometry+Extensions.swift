@@ -30,16 +30,16 @@ extension ARMeshGeometry {
     }
     
     private func verticesForFace(at index: Int) -> [(Float, Float, Float)] {
-        let vertexIndices = vertexIndicesForFace(at: index)
-        let vertices = vertexIndices.map { vertex(at: $0) }
+        let indices = vertexIndicesForFace(at: index)
+        let vertices = indices.map { vertex(at: $0) }
         return vertices
     }
     
     func centerOfFace(at index: Int) -> (Float, Float, Float) {
         let vertices = verticesForFace(at: index)
         let sum = vertices.reduce((0, 0, 0)) { ($0.0 + $1.0, $0.1 + $1.1, $0.2 + $1.2) }
-        let geometricCenter = (sum.0 / 3, sum.1 / 3, sum.2 / 3)
-        return geometricCenter
+        let center = (sum.0 / 3, sum.1 / 3, sum.2 / 3)
+        return center
     }
 
     /// To get the mesh's classification, the sample app parses the classification's raw data and instantiates an

@@ -48,6 +48,7 @@ extension ContainerView {
         }
     }
 
+    // Attempts to classify the ARMeshAnchor at the specified location
     private func classify(to location: SIMD3<Float>, completionBlock: @escaping (SIMD3<Float>?, ARMeshClassification) -> Void) {
         guard let frame = arView.session.currentFrame else {
             completionBlock(nil, .none)
