@@ -31,7 +31,7 @@ extension ContainerView {
                 let textPositionInWorldCoordinates = result.worldTransform.position - (rayDirection * 0.1)
                 
                 // Create a 3D text to visualize the classification result.
-                let textEntity = self.text(for: classification)
+                let textEntity = self.text(for: classification.description)
 
                 // Scale the text depending on the distance, such that it always appears with the same size on screen.
                 let raycastDistance = distance(result.worldTransform.position, self.arView.cameraTransform.translation)
@@ -49,7 +49,7 @@ extension ContainerView {
     }
 
     // Attempts to classify the ARMeshAnchor at the specified location
-    private func classify(to location: SIMD3<Float>, completionBlock: @escaping (SIMD3<Float>?, ARMeshClassification) -> Void) {
+    func classify(to location: SIMD3<Float>, completionBlock: @escaping (SIMD3<Float>?, ARMeshClassification) -> Void) {
         guard let frame = arView.session.currentFrame else {
             completionBlock(nil, .none)
             return
@@ -57,8 +57,8 @@ extension ContainerView {
     
         var meshAnchors = frame.anchors.compactMap({ $0 as? ARMeshAnchor })
         
-        // Sort the mesh anchors by distance to the given location and filter out
-        // any anchors that are too far away (4 meters is a safe upper limit).
+        // Sort the mesh anchors by distance to the given location
+        // and filter out any anchors that are too far away (4 meters).
         let cutoffDistance: Float = 4.0
         meshAnchors.removeAll { distance($0.transform.position, location) > cutoffDistance }
         meshAnchors.sort { distance($0.transform.position, location) < distance($1.transform.position, location) }
@@ -91,7 +91,7 @@ extension ContainerView {
         }
     }
 
-    private func text(for classification: ARMeshClassification) -> ModelEntity {
+    func text(for classification: String) -> ModelEntity {
         
         // Return cached model if available
         if let model = classifications[classification] {
@@ -102,8 +102,8 @@ extension ContainerView {
         // Generate 3D text for the classification
         let lineHeight: CGFloat = 0.05
         let font = MeshResource.Font.systemFont(ofSize: lineHeight)
-        let textMesh = MeshResource.generateText(classification.description, extrusionDepth: Float(lineHeight * 0.1), font: font)
-        let textMaterial = SimpleMaterial(color: classification.color, isMetallic: true)
+        let textMesh = MeshResource.generateText(classification, extrusionDepth: Float(lineHeight * 0.1), font: font)
+        let textMaterial = SimpleMaterial(color: .white, isMetallic: true)
         let model = ModelEntity(mesh: textMesh, materials: [textMaterial])
         // Move text geometry to the left so that its local origin is in the center
         model.position.x -= model.visualBounds(relativeTo: nil).extents.x / 2
@@ -112,11 +112,10 @@ extension ContainerView {
         return model
     }
 
-    private func sphere(radius: Float = 0.05, color: UIColor) -> ModelEntity {
+    func sphere(radius: Float = 0.05, color: UIColor) -> ModelEntity {
         let sphere = ModelEntity(mesh: .generateSphere(radius: radius), materials: [SimpleMaterial(color: color, isMetallic: false)])
         // Move sphere up by half its diameter so that it does not intersect with the mesh
         sphere.position.y = radius
         return sphere
     }
-
 }

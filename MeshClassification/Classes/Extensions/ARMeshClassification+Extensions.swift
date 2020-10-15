@@ -22,19 +22,5 @@ extension ARMeshClassification {
         @unknown default: return "Unknown"
         }
     }
-    
-    var color: UIColor {
-        switch self {
-        case .ceiling: return .cyan
-        case .door: return .brown
-        case .floor: return .red
-        case .seat: return .purple
-        case .table: return .yellow
-        case .wall: return .green
-        case .window: return .blue
-        case .none: return .lightGray
-        @unknown default: return .gray
-        }
-    }
 }
 
